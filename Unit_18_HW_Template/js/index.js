@@ -1,6 +1,12 @@
 console.log("Your JS file is loaded correctly!");
 
-$("#toggle").on("click", function(){
-    $("#dropDown").slideToggle();
-  });
-  
+$(".hoverMe").mouseenter(function() {
+  alert("Hello World");
+});
+
+$(".hoverMe").mouseleave(function() {
+  alert("Hello World");
+});
+$(".hoverMe").on("click", function(){
+  $(this).hide();
+})
