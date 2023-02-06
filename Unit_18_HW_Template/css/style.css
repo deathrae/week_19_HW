@@ -28,6 +28,8 @@ header p {
   text-align: center;
 }
 button {
+  width: 200px;
+  height: 70px;
   padding: 15px;
   background-color: #373738;
   color: white;
@@ -104,4 +106,35 @@ footer li {
 }
 .content3 {
   grid-area: content3;
+}
+.hoverMe {
+  position: relative;
+  display: inline-flex;
+  padding: 10px 30px; 
+  background: black;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+.hoverMe span {
+  position: relative;
+  z-index: 1;
+}
+.hoverMe::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50px;
+  background: #2196f3;
+  transition: width 0.5s, height 0.5s;
+
+}
+.hoverMe:hover::before {
+  width: 300px;
+  height: 300px;
 }

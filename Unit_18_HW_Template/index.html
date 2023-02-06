@@ -19,7 +19,7 @@
         <img src="images/placeholder_picture.png">
         <h1>Raeleigh Abbott</h1>
         <p>Hi there! I'm Raeleigh</p>
-        <button>Download Resume</button>
+        <button class="hoverMe"><span>Download Resume</span></button>
       </div>
     </section>
     <h1 class="heading">My UX Skills</h1>
@@ -78,4 +78,14 @@
 </html>
 
 <script src="js/index.js"> </script> 
+<script>
+  const hoverMe = document.querySelector(".hoverMe");
+  hoverMe.onmousemove = function (e) {
+    const x = e.pageX - hoverMe.offsetLeft;
+    const y = e.pageY - hoverMe.offsetTop;
+
+    hoverMe.style.setProperty("--x", x + "px");
+    hoverMe.style.setProperty("--y", y + "px");
+  }
+</script>
 
